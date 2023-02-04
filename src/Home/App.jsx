@@ -11,10 +11,6 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <Selections />
-      <Carousel />
-      <Footer />
-
     </>
   );
 };
