@@ -1,27 +1,40 @@
-# UGAHacks8
+# Travigo Travel Agency by JSSTACK DEVELOPERS
+# Pre-requisites: Nothings! just stuck into this tutorial
+This project is developed and designed by JSSTACK DEVELOPERS (`#ahmed_js 😅🚀🚀🚀`).
+This is a [Vite.js](https://vitejs.dev/) project bootstrapped with [`npm create vite@latest`]. Designed with TailwindCSS!
+# Important Links: 📣📢📣📢📣📢✈✈✈
+### Go to ViteJS [https://vitejs.dev/] (https://vitejs.dev/)!
+### Go to TailwindCSS [https://tailwindcss.com/](https://tailwindcss.com/)!
 
-Theme: travel
+# Required Packages:
+```bash
+npm npm create vite@latest
+                  ## or
+yarn create vite
 
-Brainstorm:
+npm install react-react-router-dom
+          ## or
+yarn add react-react-router-dom
+```
 
-(4)(3)Travel itinerary planner: A web or mobile app that helps travelers plan and organize their trips, including booking flights, hotels, and activities.
+## Getting Started
 
-(3)Virtual travel experiences: A platform that offers immersive, interactive experiences for travelers, such as virtual tours of famous landmarks, or virtual reality-based travel games.
+First, run the development server:
 
-(2)(2)(1)Eco-friendly travel: An app that helps travelers minimize their carbon footprint by suggesting sustainable travel options, such as green hotels and environmentally friendly modes of transportation.
+```bash
+npm install
+# or
+yarn instll
 
-Language learning for travelers: A mobile app that helps travelers learn the basics of a new language, with a focus on phrases and vocabulary that are useful while traveling.
+# and Now:
 
-(4)(4)Budget travel planning: A web app that helps travelers plan trips based on their budget, including finding the best deals on flights, accommodations, and activities.
+npm run dev
+# or
+yarn dev
+```
+Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
 
-(1)Cultural immersion: A platform that connects travelers with local experiences and activities, allowing them to immerse themselves in the culture of the places they visit.
+You can start editing the page by modifying `src/App.jsx`. The page auto-updates as you edit the file.
 
-(1)(2)Accessible travel: A mobile app that helps travelers with disabilities find accessible travel options, including accessible accommodations and transportation.
-
-(3)Travel photography: A web or mobile app that helps travelers capture and share their travel memories, including tools for organizing and editing photos.
-
-Foodie travel: An app that helps travelers discover and book food-related experiences, such as cooking classes, food tours, and dining recommendations.
-
-Adventure travel: A platform that connects travelers with adventure-focused travel experiences, such as hiking, surfing, and rock climbing.
-
-Road trip planning: A web or mobile app that helps travelers plan road trips, including route planning, stop recommendations, and real-time information on traffic and road conditions.
+## Deploy on Vercel
+Check out our [This Project On Vercel](https://travigo-travel-jsstack.vercel.app) for more details.
