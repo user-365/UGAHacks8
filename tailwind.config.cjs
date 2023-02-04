@@ -1,18 +1,19 @@
-/** @type {import('tailwindcss').Config} */ 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  mode: "jit",
   theme: {
-    extend: {},
-    screens: {
-      'xl': {'max': '1200px'},
-      'lg': {'max': '991px'},
-      'md': {'max': '767px'},
-      'sm': {'max': '550px'},
-      'xsm': {'max': '425px'},
-    }
+    extend: {
+      colors: {
+        primary: {
+          100: '#709dff',
+          200: '#5651e5'
+        },
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}
+};

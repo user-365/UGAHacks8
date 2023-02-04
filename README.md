@@ -1,40 +1,59 @@
-# Travigo Travel Agency by JSSTACK DEVELOPERS
-# Pre-requisites: Nothings! just stuck into this tutorial
-This project is developed and designed by JSSTACK DEVELOPERS (`#ahmed_js 😅🚀🚀🚀`).
-This is a [Vite.js](https://vitejs.dev/) project bootstrapped with [`npm create vite@latest`]. Designed with TailwindCSS!
-# Important Links: 📣📢📣📢📣📢✈✈✈
-### Go to ViteJS [https://vitejs.dev/] (https://vitejs.dev/)!
-### Go to TailwindCSS [https://tailwindcss.com/](https://tailwindcss.com/)!
+# Beaches.
 
-# Required Packages:
-```bash
-npm npm create vite@latest
-                  ## or
-yarn create vite
+A ReactJS & Tailwind CSS Travel Website which I built to enhance using TailwindCSS with ReactJS.
+Inspired by [_Code Commerce_](https://www.youtube.com/watch?v=gXdHvoWvViQ)
 
-npm install react-react-router-dom
-          ## or
-yarn add react-react-router-dom
+## 🏁 Get Started
+
+### Installation
+
+1. **_Clone the repository_**
+
+```sh
+git clone https://github.com/YousefElshabrawy/Beaches.git
 ```
 
-## Getting Started
+2. **_Navigate to repository directory_**
 
-First, run the development server:
-
-```bash
-npm install
-# or
-yarn instll
-
-# and Now:
-
-npm run dev
-# or
-yarn dev
+```sh
+$ cd Beaches
 ```
-Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
 
-You can start editing the page by modifying `src/App.jsx`. The page auto-updates as you edit the file.
+3. **_Install dependencies_**
 
-## Deploy on Vercel
-Check out our [This Project On Vercel](https://travigo-travel-jsstack.vercel.app) for more details.
+```sh
+$ npm install
+```
+
+### Running
+
+1. **_Compile and hot-reload for development_**
+
+```sh
+$ npm run dev
+```
+
+2. **_Compile for production_**
+
+```sh
+$ npm run build
+```
+
+## 💻 Built With
+
+- **ReactJS**
+- **TailwindCSS**
+
+## 🎥 Demo Video
+https://user-images.githubusercontent.com/62210671/188684953-6414d2f9-3c7c-436d-a874-9b66b5b78c79.mp4
+
+## 📷 Responsiveness
+
+- ### Desktop Screen
+  ![Desktop](ss/desktop.png)
+- ### Tablet Screen
+  <!-- ![Tablet](ss/tablet.png) -->
+  <img src='ss/tablet.png' width='700px'/>
+- ### Mobile Phone Screen
+  <!-- ![Mobile](ss/mobile.png) -->
+  <img src='ss/mobile.png' width='400px'/>
