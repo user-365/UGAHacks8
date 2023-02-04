@@ -102,8 +102,6 @@ const Navbar = () => {
               <a href='/src/added/abt.html'>About us</a>
             </li>
           </ul>
-          <button className='w-full mb-4 btn'>Search</button>
-          <button className='w-full mb-4 btn'>Account</button>
         </div>
       )}
     </nav>
