@@ -6,12 +6,13 @@ import Search from '../search/Search';
 import Selections from '../Components/Selections';
 import Carousel from '../Components/Carousel';
 import Footer from '../Components/Footer';
+import bgVideo from "../assets/busVid.mp4"
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero bgVideo={bgVideo} primaryDesc="Search Up Buses" secondaryDesc="Minimizing Carbon Footprint"/>
       <Search />
       <Selections />
       <Carousel />

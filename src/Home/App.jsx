@@ -2,15 +2,13 @@ import React from 'react';
 
 import Navbar from '../Components/Navbar';
 import Hero from '../Components/Hero';
-import Selections from '../Components/Selections';
-import Carousel from '../Components/Carousel';
-import Footer from '../Components/Footer';
+import bgVideo from '../assets/beachVid.mp4'
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero bgVideo={bgVideo} primaryDesc="Eco-friendly Traveling Website:" secondaryDesc="Preserving The Beauty of the World for Future Generations"/>
     </>
   );
 };
