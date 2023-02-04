@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '/src/index.scss';
 
 const CAROUSEL_DATA = [
   {

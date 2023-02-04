@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '/src/index.scss';
 import Selection from './Selection';
 
 import borabora1 from '../assets/borabora1.jpg';
