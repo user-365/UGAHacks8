@@ -74,7 +74,7 @@ const Navbar = () => {
       {navIsShown && (
         <div className='md:hidden absolute z-10 top-0 left-0 w-full bg-gray-100/90 text-black px-4 py-6'>
           <div className='flex justify-between'>
-            <h1>NAME AND LOGO</h1>
+            <h1>Eco Trip</h1>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'

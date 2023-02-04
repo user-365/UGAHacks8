@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from '../Components/Navbar';
 import Hero from '../Components/Hero';
-import Search from '../search/Search';
+import Hotelsearch from '../data/f';
 import Selections from '../Components/Selections';
 import Carousel from '../Components/Carousel';
 import Footer from '../Components/Footer';
@@ -12,7 +12,7 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <Search />
+      <Hotelsearch />
       <Selections />
       <Carousel />
       <Footer />

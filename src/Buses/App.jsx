@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Navbar from './Home/Navbar';
-import Hero from './Home/Hero';
-import Search from './search/Search';
-import Selections from './Home/Selections';
-import Carousel from './Home/Carousel';
-import Footer from './Home/Footer';
+import Navbar from '../Components/Navbar';
+import Hero from '../Components/Hero';
+import Search from '../search/Search';
+import Selections from '../Components/Selections';
+import Carousel from '../Components/Carousel';
+import Footer from '../Components/Footer';
 
 const App = () => {
   return (
