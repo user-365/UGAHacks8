@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '/src/index.scss';
 
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
@@ -8,22 +8,19 @@ const Navbar = () => {
   };
   return (
     <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white bg-transparent'>
-      <h1>NAME AND LOGO</h1>
+      <h1>Eco Trip</h1>
       <ul className='hidden md:flex'>
         <li>
           <a href='/index.html'>Home</a>
         </li>
         <li>
-          <a href='/src/added3/destinations.html'>Destinations</a>
+          <a href='/src/Hotels/hotels.html'>Hotels</a>
         </li>
         <li>
-          <a href='/src/added2/travel.html'>Travel</a>
+          <a href='/src/Buses/buses.html'>Buses</a>
         </li>
         <li>
-          <a href='/src/added1/mission.html'>Our Mission</a>
-        </li>
-        <li>
-          <a href='/src/added/abt.html'>About</a>
+          <a href='/src/About/about.html'>About</a>
         </li>
         
       </ul>
@@ -96,16 +93,10 @@ const Navbar = () => {
           </div>
           <ul className=' mb-4'>
             <li className='border-b-2 border-b-gray-600'>
-              <a href='/index.html'>Home</a>
+            <a href='/index.html'>Home</a>
             </li>
             <li className='border-b-2 border-b-gray-600'>
-              <a href='/src/added3/destinations.html'>Destinations</a>
-            </li>
-            <li className='border-b-2 border-b-gray-600'>
-              <a href='/src/added2/travel.html'>Travel</a>
-            </li>
-            <li className='border-b-2 border-b-gray-600'>
-              <a href='/src/added1/mission.html'>Our Mission</a>
+            <a href='/src/Hotels/hotels.html'>Hotels</a>
             </li>
             <li className='border-b-2 border-b-gray-600'>
               <a href='/src/added/abt.html'>About us</a>
