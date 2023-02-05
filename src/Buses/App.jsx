@@ -20,8 +20,9 @@ import {
   DirectionsRenderer,
 } from '@react-google-maps/api'
 import { useRef, useState } from 'react'
-
 const center = { lat: 48.8584, lng: 2.2945 }
+
+
 
 function App() {
   const { isLoaded } = useJsApiLoader({
@@ -35,6 +36,12 @@ function App() {
   const [duration, setDuration] = useState('')
   const [savings, setSavings] = useState(0)
 
+
+  
+
+  
+  
+  
 
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()
@@ -56,13 +63,36 @@ function App() {
       destination: destiantionRef.current.value,
       // eslint-disable-next-line no-undef
       travelMode: google.maps.TravelMode.TRANSIT,
+    }).catch((error) => {
+      const modal = document.createElement('div');
+      modal.style.backgroundColor = 'white';
+      modal.style.border = '1px solid black';
+      modal.style.position = 'fixed';
+      modal.style.top = '50%';
+      modal.style.left = '50%';
+      modal.style.transform = 'translate(-50%, -50%)';
+      modal.style.padding = '20px';
+      modal.innerHTML = `<p>No route between these locations</p>`;
+    document.body.appendChild(modal);
+    setTimeout(function() {
+      const hideModal = () => {
+        modal.style.display = "none";
+      };
+      hideModal();
+    }, 1800);
     })
-    setDirectionsResponse(results)
-    setSavings(Math.round(results.routes[0].legs[0].distance.value*.0000939*100)/100)
-    setDistance(results.routes[0].legs[0].distance.text)
-    setDuration(results.routes[0].legs[0].duration.text)
+    console.log(savings)
+    
+      setDirectionsResponse(results)
+      setSavings(Math.round(results.routes[0].legs[0].distance.value*.0000939*100)/100)
+      setDistance(results.routes[0].legs[0].distance.text)
+      setDuration(results.routes[0].legs[0].duration.text)
+    
   }
 
+  
+    
+    
   function clearRoute() {
     setDirectionsResponse(null)
     setDistance('')
@@ -71,6 +101,8 @@ function App() {
     originRef.current.value = ''
     destiantionRef.current.value = ''
   }
+
+  
 
   return (
       
@@ -129,8 +161,11 @@ function App() {
           </Box>
 
           <ButtonGroup>
-            <Button colorScheme='blue' type='submit' onClick={calculateRoute}>
-              Calculate Route
+            <Button colorScheme='blue' type='submit' onClick={()=>{
+              calculateRoute()
+              
+            }}>
+            Calculate Route
             </Button>
             <IconButton
               aria-label='center back'
