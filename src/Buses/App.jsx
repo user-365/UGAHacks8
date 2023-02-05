@@ -33,6 +33,8 @@ function App() {
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
   const [duration, setDuration] = useState('')
+  const [savings, setSavings] = useState(0)
+
 
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()
@@ -56,6 +58,7 @@ function App() {
       travelMode: google.maps.TravelMode.TRANSIT,
     })
     setDirectionsResponse(results)
+    setSavings(Math.round(results.routes[0].legs[0].distance.value*.0000939*100)/100)
     setDistance(results.routes[0].legs[0].distance.text)
     setDuration(results.routes[0].legs[0].duration.text)
   }
@@ -64,6 +67,7 @@ function App() {
     setDirectionsResponse(null)
     setDistance('')
     setDuration('')
+    setSavings(0)
     originRef.current.value = ''
     destiantionRef.current.value = ''
   }
@@ -97,7 +101,7 @@ function App() {
           )}
         </GoogleMap>
       </Box>
-      <Box position='absolute' top={0} h='20%' w='100%' bgColor='mediumblue'><Navbar /></Box>
+      <Box position='absolute' top={0} h='20%' w='100%' bgColor='darkturquoise'><Navbar /></Box>
       <Box
           position=''
         p={4}
@@ -138,7 +142,7 @@ function App() {
         <HStack spacing={4} mt={4} justifyContent='space-between'>
           <Text>Distance: {distance} </Text>
           <Text>Duration: {duration} </Text>
-          <Text>Saving: {distance*150/1000} kg of CO2</Text>
+          <Text>Saving: {savings} kg of CO2</Text>
           <IconButton
             aria-label='center back'
             icon={<FaLocationArrow />}
