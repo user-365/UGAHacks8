@@ -1,146 +1,56 @@
-import React,{Fragment,useState} from 'react';
-import Navbar from '../Home/Navbar';
-import Footer from '../Home/Footer';
+import React, { useState, useEffect } from "react";
+import * as XLSX from 'xlsx';
+import FileSaver from "file-saver";
 
-const About = () => {
-  const [ toggleTab, setToggleTab] = useState(1)
-  const toggleState = (index) =>{setToggleTab(index)}
+function Hotels() {
+  const [hotels, setHotels] = useState([]);
+
+  useEffect(() => {
+    const file = new File(["scores.xlsx"], "scores.xlsx", {
+      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    });
+
+    const reader = new FileReader();
+
+    reader.onload = (event) => {
+      const data = new Uint8Array(event.target.result);
+      const workbook = XLSX.read(data, { type: "array" });
+      const firstSheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[firstSheetName];
+      const sheetData = XLSX.utils.sheet_to_json(worksheet);
+
+      setHotels(sheetData);
+    };
+
+    reader.readAsArrayBuffer(file);
+  }, []);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const city = event.target.city.value;
+
+    const filteredHotels = hotels.filter((hotel) => hotel.City === city);
+
+    const data = XLSX.utils.json_to_sheet(filteredHotels);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, data, "Filtered Hotels");
+
+    const file = new Blob([XLSX.write(workbook, { type: "array", bookType: "xlsx" })], {
+      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    });
+
+    FileSaver.saveAs(file, "filtered_hotels.xlsx");
+  };
+
   return (
-    <Fragment>
-    <Navbar />
-    <section className="about">
-
-    <div className="row">
-
-    <div className="column">
-      <div className="about-img"></div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="city" className='text-white mb-2'>Enter city:</label>
+        <input type="text" id="city" name="city" />
+        <button type="submit">Search</button>
+      </form>
     </div>
-
-    <div className="column">
-
-    <div className="tabs">
-
-    <div className={toggleTab === 1 ? "single-tab active-tab": "single-tab"}onClick = {() => toggleState(1)}>
-      <h2>About</h2>
-    </div>
-
-    <div className={toggleTab === 2 ? "single-tab active-tab": "single-tab"}onClick = {() => toggleState(2)}>
-      <h2>Skills</h2>
-    </div>
-
-    <div className={toggleTab === 3 ? "single-tab active-tab": "single-tab"}onClick = {() => toggleState(3)}>
-      <h2>Experience</h2>
-    </div>
-      
-    </div>
-
-    <div className="tab-content">
-
-    {/* About Content */}
-
-    <div className={toggleTab === 1 ?"content active-content":"content"}>
-      <h2>My Story</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-       Eveniet nostrum laborum porro pariatur minima tenetur.
-       Adipisci obcaecati placeat ex veritatis est delectus sunt, 
-       quam doloribus nemo sed perferendis ipsa corporis?</p>
-       <h3>I Am Web Designer And Developer Having 10 Year Of Experience</h3>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quae accusantium totam mollitia facilis debitis porro sunt repellat eveniet dignissimos.</p>
-    </div>
-
-    {/* Skills Content */}
-
-    <div className={toggleTab === 2 ?"content active-content":"content"}>
-      <h2>Skills</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-       Eveniet nostrum laborum porro pariatur minima tenetur.
-       Adipisci obcaecati placeat ex veritatis est delectus sunt, 
-       quam doloribus nemo sed perferendis ipsa corporis?</p>
-
-       <div className="skills-row">
-
-       <div className="skills-column">
-        <div className="progress-wrap">
-          <h3>Developer</h3>
-          <div className="progress">
-            <div className="progress-bar">
-              <span>80%</span>
-            </div>
-          </div>
-        </div>
-       </div>
-
-       <div className="skills-column">
-        <div className="progress-wrap">
-          <h3>Designer</h3>
-          <div className="progress">
-            <div className="progress-bar Designer">
-              <span>90%</span>
-            </div>
-          </div>
-        </div>
-       </div>
-
-       <div className="skills-column">
-        <div className="progress-wrap">
-          <h3>Javascript</h3>
-          <div className="progress">
-            <div className="progress-bar Javascript">
-              <span>85%</span>
-            </div>
-          </div>
-        </div>
-       </div>
-
-       <div className="skills-column">
-        <div className="progress-wrap">
-          <h3>PhotoShop</h3>
-          <div className="progress">
-            <div className="progress-bar PhotoShop">
-              <span>88%</span>
-            </div>
-          </div>
-        </div>
-       </div>
-
-       </div>
-
-    </div>
-
-       {/* Experience Content */}
-
-    <div className={toggleTab === 3 ?"content active-content":"content"}>
-
-    <div className="exp-column">
-      <h3>Web Developer</h3>
-      <span>2014-2022</span>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim error rem dicta perferendis et qui obcaecati labore accusantium cupiditate libero.</p>
-    </div>
-
-    <div className="exp-column">
-      <h3>Graphic Designer</h3>
-      <span>2015-2022</span>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim error rem dicta perferendis et qui obcaecati labore accusantium cupiditate libero.</p>
-    </div>
-
-    <div className="exp-column">
-      <h3>Photoshop</h3>
-      <span>2017-2022</span>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim error rem dicta perferendis et qui obcaecati labore accusantium cupiditate libero.</p>
-    </div>
-    
-    </div>
-        
-    </div>
-
-    </div>
-
-    </div>
-
-    </section>
-    <Footer />
-    </Fragment>
-  )
+  );
 }
 
-export default About
+export default Hotels;
