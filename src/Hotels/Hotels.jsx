@@ -59,8 +59,9 @@ function Hotels() {
       </form>
       {hotels.map((item) => (
         <div style={{ border: "1px solid black", margin: "10px" }}>
-          <h2>id number:{item[0]}about</h2>
-          <p>{item[1]}</p>
+          <h2>{item[2]}about</h2>
+          <p>{item[3]}</p>
+          <p>{item[10]} rating</p>
         </div>
       ))}
     </div>
