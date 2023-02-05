@@ -28,10 +28,11 @@ function initMap() {
     );
 
     // get Capital Bikeshare data
-    const bike_parsing_script = document.createElement("bike_parsing_script");
+    const bike_parsing_script = document.createElement("script");
+    console.log("Yeah");
     bike_parsing_script.setAttribute(
         "src",
-        "fetch('/src/Maps/bike_json_data.json').then((response) => response.json()).then((json) => console.log('fdsjKFJDSKFLJSDLF'));"
+        "fetch('bike_json_data.json').then((response) => response.json()).then((json) => console.log('fdsjKFJDSKFLJSDLF'));"
     );
 
     document.getElementsByTagName("head")[0].appendChild(bike_parsing_script);
