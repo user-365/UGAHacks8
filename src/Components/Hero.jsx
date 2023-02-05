@@ -1,6 +1,7 @@
 import React from 'react';
 import '/src/index.scss';
 import FAQs from '../Home/FAQs';
+import Hotels from '../Hotels/Hotels';
 
 const Hero = (props) => {
   return (
@@ -17,6 +18,8 @@ const Hero = (props) => {
         <h1 className='text-white mb-2'>{props.primaryDesc}</h1>
         <h2 className='text-white mb-4'>{props.secondaryDesc}</h2>
         <FAQs/>  
+        <h4 className='text-white mb-4'>{props.paragraph}</h4>
+        {props.isHotel && <Hotels />}
       </div>
     </header>
   );
