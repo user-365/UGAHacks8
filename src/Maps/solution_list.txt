@@ -1,0 +1,2 @@
+- create info windows
+- neighborhood discovery
