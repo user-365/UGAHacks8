@@ -13,10 +13,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Hero bgVideo={bgVideo} primaryDesc="Search Up Hotels" secondaryDesc="Minimizing Carbon Footprint"/>]
-      <Hotels />
-      <Selections />
-      <Carousel />
+      <Hero bgVideo={bgVideo} primaryDesc="Search Up Hotels" secondaryDesc="Minimizing Carbon Footprint" isHotel={true}/>
       <Footer />
     </>
   );
