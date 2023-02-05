@@ -1,54 +1,68 @@
 import React, { useState, useEffect } from "react";
 import * as XLSX from 'xlsx';
 import FileSaver from "file-saver";
+import data from '../data/ApprovedHotel.json'
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+  DirectionsRenderer,
+} from '@react-google-maps/api'
+const Card = ( id, title, street, city, state, zipcode, points, certlevel, projecttype ) => (
+  
+  <div key={id} style={{ border: '1px solid black', margin: '10px' }}>
+    <h2>{title}</h2>
+    <p>{certlevel} certification</p>
 
+  </div>
+);
 function Hotels() {
+  
+  const [Data, setData] = useState(data);
   const [hotels, setHotels] = useState([]);
+  
 
-  useEffect(() => {
-    const file = new File(["scores.xlsx"], "scores.xlsx", {
-      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    });
-
-    const reader = new FileReader();
-
-    reader.onload = (event) => {
-      const data = new Uint8Array(event.target.result);
-      const workbook = XLSX.read(data, { type: "array" });
-      const firstSheetName = workbook.SheetNames[0];
-      const worksheet = workbook.Sheets[firstSheetName];
-      const sheetData = XLSX.utils.sheet_to_json(worksheet);
-
-      setHotels(sheetData);
-    };
-
-    reader.readAsArrayBuffer(file);
-  }, []);
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    
+    //console.log(Data.Sheet1)
     const city = event.target.city.value;
+    const tempHotels = [];
+    for (let  i = 0; i<Data.Sheet1.length; i++) {
+      //console.log(Data.Sheet1[i][4])
+      
+      if (Data.Sheet1[i][4] == city){
+        tempHotels.push(Data.Sheet1[i]);
+        console.log(Data.Sheet1[i]);
+      }
+    }
+    if (tempHotels.length < 1) {
+      console.log('no matches')
+    } else {
+      setHotels(tempHotels)
+    }
+    
+    
 
-    const filteredHotels = hotels.filter((hotel) => hotel.City === city);
-
-    const data = XLSX.utils.json_to_sheet(filteredHotels);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, data, "Filtered Hotels");
-
-    const file = new Blob([XLSX.write(workbook, { type: "array", bookType: "xlsx" })], {
-      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    });
-
-    FileSaver.saveAs(file, "filtered_hotels.xlsx");
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="city">Enter city:</label>
+      
         <input type="text" id="city" name="city" />
         <button type="submit">Search</button>
       </form>
+      {hotels.map((item) => (
+        <div style={{ border: "1px solid black", margin: "10px" }}>
+          <h2>id number:{item[0]}about</h2>
+          <p>{item[1]}</p>
+        </div>
+      ))}
     </div>
   );
 }
