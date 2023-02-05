@@ -20,9 +20,9 @@ import {
   DirectionsRenderer,
 } from '@react-google-maps/api'
 import { useRef, useState } from 'react'
-const center = { lat: 38.89659, lng: -77.031471 }
-
+const center = { lat: 38.89659, lng: -77.031471 };
 function App() {
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: 'AIzaSyBrvmTM6a5rBu3QCSGsviRZ_cZ8JVONA9s',
     libraries: ['places'],
@@ -37,21 +37,21 @@ function App() {
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()
   /** @type React.MutableRefObject<HTMLInputElement> */
-  const destiantionRef = useRef()
+  const destinationRef = useRef()
 
   if (!isLoaded) {
     return <SkeletonText />
   }
 
   async function calculateRoute() {
-    if (originRef.current.value === '' || destiantionRef.current.value === '') {
+    if (originRef.current.value === '' || destinationRef.current.value === '') {
       return
     }
     // eslint-disable-next-line no-undef
     const directionsService = new google.maps.DirectionsService()
     const results = await directionsService.route({
       origin: originRef.current.value,
-      destination: destiantionRef.current.value,
+      destination: destinationRef.current.value,
       // eslint-disable-next-line no-undef
       travelMode: google.maps.TravelMode.TRANSIT,
     }).catch((error) => {
@@ -81,16 +81,13 @@ function App() {
     
   }
 
-  
-    
-    
   function clearRoute() {
     setDirectionsResponse(null)
     setDistance('')
     setDuration('')
     setSavings(0)
     originRef.current.value = ''
-    destiantionRef.current.value = ''
+    destinationRef.current.value = ''
   }
 
   
@@ -116,7 +113,9 @@ function App() {
             mapTypeControl: false,
             fullscreenControl: false,
           }}
-          onLoad={map => setMap(map)}
+          onLoad={map => {
+            setMap(window.initMap);
+          }}
         >
           <Marker position={center} />
           {directionsResponse && (
@@ -127,13 +126,13 @@ function App() {
       <Box position='absolute' top={0} h='20%' w='100%' bgColor='darkturquoise'><Navbar /></Box>
       <Box
           position=''
-        p={4}
-        borderRadius='lg'
-        m={20}
-        bgColor='white'
-        shadow='base'
-        minW='container.md'
-        zIndex='1'
+          p={4}
+          borderRadius='lg'
+          m={20}
+          bgColor='white'
+          shadow='base'
+          minW='container.md'
+          zIndex='1'
       >
         <HStack spacing={2} justifyContent='space-between'>
           <Box flexGrow={1}>
@@ -146,7 +145,7 @@ function App() {
               <Input
                 type='text'
                 placeholder='Destination'
-                ref={destiantionRef}
+                ref={destinationRef}
               />
             </Autocomplete>
           </Box>

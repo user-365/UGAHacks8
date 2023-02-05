@@ -6,6 +6,7 @@
 let map;
 
 function initMap() {
+    console.log("initmap running");
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 38.89659, lng: -77.031471 },
         zoom: 2,
@@ -30,11 +31,7 @@ function initMap() {
     const bike_parsing_script = document.createElement("bike_parsing_script");
     bike_parsing_script.setAttribute(
         "src",
-        `var request = new XMLHttpRequest();
-        request.open("GET", "/src/Maps/bike_json_data.json", false);
-        request.send(null)
-        var my_JSON_object = JSON.parse(request.responseText);
-        eqfeed_callback(my_JSON_object.result[0]);`
+        "fetch('/src/Maps/bike_json_data.json').then((response) => response.json()).then((json) => console.log('fdsjKFJDSKFLJSDLF'));"
     );
 
     document.getElementsByTagName("head")[0].appendChild(bike_parsing_script);
@@ -43,6 +40,8 @@ function initMap() {
 // Defines the callback function to parse capitalbikeshare json.
 function bike_callback(results) {
 
+    console.log("bike calling back");
+    console.log(results);
     for (let i = 0; i < results.data.supply.stations.length; i++) {
         const coords = results.data.supply.stations[i].location;
 
