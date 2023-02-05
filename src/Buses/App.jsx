@@ -20,9 +20,7 @@ import {
   DirectionsRenderer,
 } from '@react-google-maps/api'
 import { useRef, useState } from 'react'
-const center = { lat: 48.8584, lng: 2.2945 }
-
-
+const center = { lat: 38.89659, lng: -77.031471 }
 
 function App() {
   const { isLoaded } = useJsApiLoader({
@@ -35,13 +33,6 @@ function App() {
   const [distance, setDistance] = useState('')
   const [duration, setDuration] = useState('')
   const [savings, setSavings] = useState(0)
-
-
-  
-
-  
-  
-  
 
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()
