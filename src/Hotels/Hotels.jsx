@@ -45,7 +45,7 @@ function Hotels() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="city">Enter city:</label>
+        <label htmlFor="city" className='text-white mb-2'>Enter city:</label>
         <input type="text" id="city" name="city" />
         <button type="submit">Search</button>
       </form>
