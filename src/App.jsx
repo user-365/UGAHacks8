@@ -7,7 +7,8 @@ import Search from './components/Search';
 import Selections from './components/Selections';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
-import SearchBar from './backend/Searchbar'
+import SearchBar from './backend/Searchbar';
+
 
 const App = () => {
   return (
