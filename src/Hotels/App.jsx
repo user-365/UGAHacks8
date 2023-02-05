@@ -14,7 +14,6 @@ const App = () => {
     <>
       <Navbar />
       <Hero bgVideo={bgVideo} primaryDesc="Search Up Hotels" secondaryDesc="Minimizing Carbon Footprint" isHotel={true}/>
-      <Footer />
     </>
   );
 };
