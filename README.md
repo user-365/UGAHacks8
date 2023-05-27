@@ -21,5 +21,9 @@ But EcoTrip goes beyond just recommending accommodations. By incorporating real-
 
 EcoTrip is more than just a travel app; it's a transformative tool that empowers individuals to make a difference. By choosing eco-friendly options and minimizing your carbon footprint, you become part of a global movement towards a more sustainable future.
 
-## Contacts
-
+## 🤝 Contacts
+- [Hardik Jhunjhunwala (Full Stack Developer)](https://github.com/HardikJhunjhunwala)
+- [Eunjung Kim (Backend Developer)](https://github.com/peachjelly77)
+- [Henry Lue (Fullstack Developer)](https://github.com/Hamry)
+- [Rian Rahman (Project Member)](https://github.com/RiRah123)
+- [Yitao Tian (Project Member)](https://github.com/hongtri11)
