@@ -1,4 +1,4 @@
-# EcoTrip
+# EcoTrip: Your Sustainable Travel Companion
 [![JavaScipt](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)]()
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)]()
 [![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)]()
@@ -6,6 +6,10 @@
 [![Google Maps API](https://img.shields.io/badge/Google_Maps_API-4285F4?style=for-the-badge&logo=GoogleMaps&logoColor=white)]()
 
 ## 🌱 What is EcoTrip?
+
+<p align="center">
+  <img src="./ecotrip.gif" width="1000" height="450">
+</p>
 
 In a world where the impact of carbon emissions looms large, finding ways to minimize our carbon footprints is essential. Inspired by the urgent need to address this global challenge, I among four teammates built EcoTrip - a revolutionary web app designed to guide people towards sustainable living and travel.
 
@@ -17,4 +21,5 @@ But EcoTrip goes beyond just recommending accommodations. By incorporating real-
 
 EcoTrip is more than just a travel app; it's a transformative tool that empowers individuals to make a difference. By choosing eco-friendly options and minimizing your carbon footprint, you become part of a global movement towards a more sustainable future.
 
+## Contacts
 
