@@ -36,4 +36,4 @@ https://github.com/RiRah123/EcoTrip/assets/83044307/0af8a6cf-0212-4a2a-b0e7-3855
 - [Eunjung Kim (Backend Developer)](https://github.com/peachjelly77)
 - [Henry Lue (Fullstack Developer)](https://github.com/Hamry)
 - [Rian Rahman (Frontend Developer)](https://github.com/RiRah123)
-- [Yitao Tian (Fullstack Developer)](https://github.com/hongtri11)
+- [Yitao Tian (Fullstack Developer)]((https://github.com/user-365)
