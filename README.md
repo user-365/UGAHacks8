@@ -24,6 +24,9 @@ EcoTrip is more than just a travel app; it's a transformative tool that empowers
 ## 🖌️ How We Built EcoTrip?
 We started by creating a basic prototype of the web app in React, sketching out the initial design on a whiteboard. We then carefully identified and prioritized the implementable and feasible features. Our focus shifted to building the back end, which involved connecting the searched city for buses and hotels to the Google Map API. After ensuring the functionality of the back end, we proceeded to develop the front end, utilizing React, HTML, and CSS to create visually appealing and user-friendly pages.
 
+## ➕ What's Next for EcoTrip?
+While developing EcoTrip, we recognized a limitation in the available travel options for users to search for eco-friendly transportation. Currently, only bus journeys are considered in calculating the amount of CO2 that can be saved. In the future, we aim to expand the options to include cars, electric scooters, trains, and more, providing users with a comprehensive view of emitted CO2 for different modes of transportation. Additionally, we plan to transition from simply accessing API data to storing relevant information in databases, enabling even more advanced features and personalized recommendations for users.
+
 # Demo Video
 
 https://github.com/RiRah123/EcoTrip/assets/83044307/0af8a6cf-0212-4a2a-b0e7-3855e6b0323e
