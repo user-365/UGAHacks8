@@ -25,5 +25,5 @@ EcoTrip is more than just a travel app; it's a transformative tool that empowers
 - [Hardik Jhunjhunwala (Full Stack Developer)](https://github.com/HardikJhunjhunwala)
 - [Eunjung Kim (Backend Developer)](https://github.com/peachjelly77)
 - [Henry Lue (Fullstack Developer)](https://github.com/Hamry)
-- [Rian Rahman (Project Member)](https://github.com/RiRah123)
-- [Yitao Tian (Project Member)](https://github.com/hongtri11)
+- [Rian Rahman (Fullstack Developer)](https://github.com/RiRah123)
+- [Yitao Tian (Fullstack Developer)](https://github.com/hongtri11)
