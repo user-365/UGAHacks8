@@ -21,6 +21,9 @@ But EcoTrip goes beyond just recommending accommodations. By incorporating real-
 
 EcoTrip is more than just a travel app; it's a transformative tool that empowers individuals to make a difference. By choosing eco-friendly options and minimizing your carbon footprint, you become part of a global movement towards a more sustainable future.
 
+## 🖌️ How We Built EcoTrip?
+We started by creating a basic prototype of the web app in React, sketching out the initial design on a whiteboard. We then carefully identified and prioritized the implementable and feasible features. Our focus shifted to building the back end, which involved connecting the searched city for buses and hotels to the Google Map API. After ensuring the functionality of the back end, we proceeded to develop the front end, utilizing React, HTML, and CSS to create visually appealing and user-friendly pages.
+
 ## 🤝 Contacts
 - [Hardik Jhunjhunwala (Full Stack Developer)](https://github.com/HardikJhunjhunwala)
 - [Eunjung Kim (Backend Developer)](https://github.com/peachjelly77)
